@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 SISTEMA GESTÃO GRÁFICA VIP | Organize Sua Produção em 5 Minutos</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sistema industrial que organiza pedidos, controla finanças e automatiza 90% do trabalho manual da sua gráfica em menos de 1 hora.">
+    <meta name="keywords" content="sistema gráfica, gestão gráfica, organização produção, gráfica software, controle pedidos">
+    <meta name="author" content="GraficaPro.VIP">
+    
+    <!-- Tailwind CSS + Custom -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vip': '#FF6B35',
+                        'vip-dark': '#D84315',
+                        'vip-light': '#FF8A65',
+                        'vip-accent': '#00BCD4',
+                        'dark-bg': '#0a0a0a',
+                    },
+                    animation: {
+                        'pulse-vip': 'pulseVip 2s infinite',
+                        'glow': 'glow 1.5s ease-in-out infinite',
+                        'float-btn': 'floatBtn 3s ease-in-out infinite',
+                        'shine': 'shine 3s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'production-flow': 'productionFlow 2s linear infinite',
+                    },
+                    keyframes: {
+                        pulseVip: {
+                            '0%, 100%': { 
+                                transform: 'scale(1)',
+                                boxShadow: '0 0 0 0 rgba(255, 107, 53, 0.7)'
+                            },
+                            '50%': { 
+                                transform: 'scale(1.05)',
+                                boxShadow: '0 0 0 20px rgba(255, 107, 53, 0)'
+                            }
+                        },
+                        glow: {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.7 }
+                        },
+                        floatBtn: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        shine: {
+                            '0%': { backgroundPosition: '-200px 0' },
+                            '100%': { backgroundPosition: '200px 0' }
+                        },
+                        productionFlow: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-vip': 'linear-gradient(45deg, #FF6B35, #FF8A65, #FF6B35)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Background com impressora industrial */
+        .printer-bg {
+            background: 
+                linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.9)),
+                url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1920&auto=format&fit=crop') center/cover fixed;
+            background-blend-mode: opacity 0.15;
+        }
+        
+        /* Overlay industrial */
+        .industrial-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ff6b35' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: -1;
+        }
+        
+        /* Botão VIP - Brilha e Flutua */
+        .btn-vip {
+            background: linear-gradient(45deg, #FF6B35, #FF8A65, #FF6B35);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-vip:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-vip::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Card com efeito de luz */
+        .card-glow {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card-glow:hover {
+            border-color: #FF6B35;
+            box-shadow: 0 0 40px rgba(255, 107, 53, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        /* Badge de urgência */
+        .urgent-badge {
+            background: linear-gradient(45deg, #FF6B35, #D84315);
+            animation: pulseVip 2s infinite;
+        }
+        
+        /* Timer VIP */
+        .timer-vip {
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 10px #FF6B35;
+            animation: glow 1.5s infinite;
+        }
+        
+        /* Linha de produção animada */
+        .production-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #FF6B35, transparent);
+            background-size: 200% 100%;
+            animation: productionFlow 2s linear infinite;
+        }
+        
+        /* Efeito de impressão nos títulos */
+        .print-text {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+        
+        .print-text::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background: #FF6B35;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: printLine 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes printLine {
+            to { transform: scaleX(1); }
+        }
+        
+        /* Efeito de faíscas nos botões */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 1s infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 768px) {
+            .text-6xl {
+                font-size: 3rem;
+            }
+            
+            .text-5xl {
+                font-size: 2.5rem;
+            }
+            
+            .text-4xl {
+                font-size: 2rem;
+            }
+            
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .flex-col-mobile {
+                flex-direction: column;
+            }
+            
+            .btn-vip {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+        
+        /* Acessibilidade: foco visível */
+        *:focus {
+            outline: 2px solid #FF6B35;
+            outline-offset: 2px;
+        }
+        
+        /* Performance: reduzir animações para usuários que preferem */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body class="printer-bg industrial-overlay">
+    
+    <!-- 🔥 BARRA SUPERIOR URGENTE -->
+    <div class="bg-gradient-to-r from-vip-dark to-vip py-3 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative z-10 flex items-center justify-center flex-wrap px-2">
+            <i class="fas fa-fire mr-3 animate-pulse"></i>
+            <span class="font-bold">🚨 PROMOÇÃO RELÂMPAGO: </span>
+            <span class="mx-2 timer-vip font-mono" id="top-timer">15:00:00</span>
+            <span class="mx-2">PARA ACESSO VITALÍCIO!</span>
+            <i class="fas fa-fire ml-2 animate-pulse"></i>
+        </div>
+    </div>
+    
+    <!-- 🧭 NAVEGAÇÃO VIP -->
+    <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-vip/30" role="navigation" aria-label="Navegação principal">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="bg-vip p-3 rounded-xl mr-4 shadow-lg" aria-hidden="true">
+                        <i class="fas fa-print text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">
+                            <span class="text-white">MINHA</span>
+                            <span class="text-vip">GRÁFICA</span>
+                            <span class="text-vip-accent">.VIP</span>
+                        </h1>
+                        <p class="text-xs text-gray-400">Sistema Industrial de Gestão</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#resultados" class="text-gray-300 hover:text-vip transition-colors duration-300">Resultados</a>
+                    <a href="#planos" class="text-gray-300 hover:text-vip transition-colors duration-300">Planos</a>
+                    <a href="#garantia" class="text-gray-300 hover:text-vip transition-colors duration-300">Garantia</a>
+                </div>
+                
+                <div class="relative">
+                    <a href="#oferta-final" class="btn-vip text-white font-bold py-3 px-6 rounded-xl shadow-2xl relative overflow-hidden inline-flex items-center">
+                        <i class="fas fa-bolt mr-2"></i>
+                        ACESSAR OFERTA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 🚀 HERO SECTION - IMPACTO VISUAL -->
+    <main class="relative py-20 md:py-32 overflow-hidden">
+        <!-- Linha de produção animada -->
+        <div class="production-line absolute top-0 left-0 w-full" aria-hidden="true"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- Badge VIP -->
+                        <div class="inline-flex items-center urgent-badge text-white px-6 py-3 rounded-full mb-8 shadow-lg">
+                            <i class="fas fa-crown mr-3"></i>
+                            <span class="font-bold">SISTEMA VIP - GRÁFICA 2026</span>
+                        </div>
+                        
+                        <!-- Título Principal com efeito -->
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                            <span class="print-text">PRODUÇÃO</span>
+                            <br>
+                            <span class="text-vip">100% OTIMIZADA</span>
+                            <br>
+                            <span class="text-white">PARA SUA GRÁFICA</span>
+                        </h1>
+                        
+                        <!-- Subtítulo Impactante -->
+                        <p class="text-xl text-gray-300 mb-10">
+                            Sistema profissional que organiza pedidos, controla finanças e 
+                            <span class="text-vip font-bold">automatiza 90% do seu trabalho manual</span> 
+                            em menos de 1 hora.
+                        </p>
+                        
+                        <!-- Stats Rápidos -->
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+                            <div class="card-glow p-5 rounded-xl text-center">
+                                <div class="text-3xl font-bold text-vip mb-2">-10h</div>
+                                <div class="text-gray-400 text-sm">Economia semanal</div>
+                            </div>
+                            <div class="card-glow p-5 rounded-xl text-center">
+                                <div class="text-3xl font-bold text-vip-accent mb-2">+47%</div>
+                                <div class="text-gray-400 text-sm">Faturamento</div>
+                            </div>
+                            <div class="card-glow p-5 rounded-xl text-center">
+                                <div class="text-3xl font-bold text-white mb-2">247</div>
+                                <div class="text-gray-400 text-sm">Gráficas usando</div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Principal -->
+                        <div class="relative">
+                            <a href="#oferta-final" 
+                               class="btn-vip text-white font-bold py-5 px-10 rounded-xl text-lg inline-flex items-center justify-center shadow-2xl">
+                                <i class="fas fa-play-circle mr-3"></i>
+                                Quero meu Sistema - R$147
+                            </a>
+                            <div class="text-sm text-gray-400 mt-4 flex items-center">
+                                <i class="fas fa-shield-alt text-vip-accent mr-2"></i>
+                                30 dias de garantia • Download imediato
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Preview do Sistema -->
+                    <div class="relative">
+                        <!-- Monitor com sistema -->
+                        <div class="bg-gray-900 rounded-2xl p-2 border-2 border-vip/50 shadow-2xl" role="img" aria-label="Preview do sistema de gestão">
+                            <div class="bg-black rounded-xl p-6">
+                                <!-- Header do dashboard -->
+                                <div class="flex justify-between items-center mb-6">
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 bg-red-500 rounded-full mr-2" aria-hidden="true"></div>
+                                        <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2" aria-hidden="true"></div>
+                                        <div class="w-3 h-3 bg-green-500 rounded-full" aria-hidden="true"></div>
+                                        <span class="ml-4 text-sm text-gray-400">dashboard.minhagrafica.pro</span>
+                                    </div>
+                                    <div class="text-vip text-sm font-bold">ONLINE</div>
+                                </div>
+                                
+                                <!-- Conteúdo do sistema -->
+                                <div class="grid grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-gray-800 p-4 rounded-lg">
+                                        <div class="text-vip-accent text-sm">HOJE</div>
+                                        <div class="text-2xl font-bold text-white">R$ 3.847</div>
+                                    </div>
+                                    <div class="bg-gray-800 p-4 rounded-lg">
+                                        <div class="text-vip-accent text-sm">PEDIDOS</div>
+                                        <div class="text-2xl font-bold text-white">14</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Lista de pedidos -->
+                                <div class="bg-gray-800 rounded-lg p-4">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <h3 class="font-bold">PRODUÇÃO AGORA</h3>
+                                        <span class="text-xs bg-vip/20 text-vip px-2 py-1 rounded">ATIVA</span>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="flex justify-between items-center p-3 bg-gray-900 rounded">
+                                            <div>
+                                                <div class="font-medium">Banner 80x100</div>
+                                                <div class="text-xs text-gray-400">Cliente: João Silva</div>
+                                            </div>
+                                            <div class="text-vip font-bold">R$ 85,00</div>
+                                        </div>
+                                        <div class="flex justify-between items-center p-3 bg-gray-900 rounded">
+                                            <div>
+                                                <div class="font-medium">Adesivo Vinil</div>
+                                                <div class="text-xs text-gray-400">Cliente: Maria Santos</div>
+                                            </div>
+                                            <div class="text-vip font-bold">R$ 120,00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Barra de progresso -->
+                                <div class="mt-6">
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="text-gray-400">Produção do dia:</span>
+                                        <span class="text-vip font-bold">78%</span>
+                                    </div>
+                                    <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-gradient-to-r from-vip to-vip-accent" style="width: 78%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notificação flutuante -->
+                        <div class="absolute -bottom-6 -left-6 bg-gray-900 border border-vip/50 rounded-xl p-4 shadow-xl max-w-xs hidden lg:block">
+                            <div class="flex items-center mb-3">
+                                <div class="w-12 h-12 bg-gradient-to-r from-vip to-vip-dark rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                    M
+                                </div>
+                                <div>
+                                    <div class="font-bold">Marcos, SP</div>
+                                    <div class="text-xs text-vip">COMPROU AGORA</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-300 italic">"Finalmente vou organizar minha produção!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- ⚡ SEÇÃO: COMO TRANSFORMA SUA PRODUÇÃO -->
+    <section class="py-20 relative">
+        <!-- Fundo de padrão industrial -->
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,<svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100\" height=\"100\" fill=\"none\"/><path d=\"M20,20 L80,20 L80,80 L20,80 Z\" fill=\"none\" stroke=\"%23FF6B35\" stroke-width=\"2\"/><path d=\"M30,30 L70,30 L70,70 L30,70 Z\" fill=\"none\" stroke=\"%23FF6B35\" stroke-width=\"1\"/></svg>');"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    SUA PRODUÇÃO 
+                    <span class="text-vip">ANTES</span> 
+                    VS 
+                    <span class="text-vip-accent">DEPOIS</span>
+                </h2>
+                <p class="text-xl text-gray-400">Veja a transformação em tempo real</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- ANTES -->
+                <div class="card-glow p-8 rounded-2xl">
+                    <div class="text-center mb-8">
+                        <div class="text-4xl mb-4">😫</div>
+                        <h3 class="text-2xl font-bold text-red-400 mb-4">PRODUÇÃO DESORGANIZADA</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <div class="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
+                                <i class="fas fa-times text-red-400"></i>
+                            </div>
+                            <span>Planilhas soltas e perdidas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
+                                <i class="fas fa-times text-red-400"></i>
+                            </div>
+                            <span>Pedidos atrasados constantemente</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
+                                <i class="fas fa-times text-red-400"></i>
+                            </div>
+                            <span>Dúvidas sobre lucro real</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
+                                <i class="fas fa-times text-red-400"></i>
+                            </div>
+                            <span>Clientes insatisfeitos/ erros de produção</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- DEPOIS -->
+                <div class="card-glow p-8 rounded-2xl border-2 border-vip/50">
+                    <div class="text-center mb-8">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="text-2xl font-bold text-vip-accent mb-4">COM SISTEMA VIP</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <div class="w-8 h-8 bg-vip-accent/20 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
+                                <i class="fas fa-check text-vip-accent"></i>
+                            </div>
+                            <span>Tudo centralizado em um sistema</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-8 h-8 bg-vip-accent/20 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
+                                <i class="fas fa-check text-vip-accent"></i>
+                            </div>
+                            <span>Produção 100% organizada</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-8 h-8 bg-vip-accent/20 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
+                                <i class="fas fa-check text-vip-accent"></i>
+                            </div>
+                            <span>Lucro em tempo real</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-8 h-8 bg-vip-accent/20 rounded-full flex items-center justify-center mr-4" aria-hidden="true">
+                                <i class="fas fa-check text-vip-accent"></i>
+                            </div>
+                            <span>Clientes fiéis e satisfeitos</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 💰 SEÇÃO: PLANOS VIP -->
+    <section id="planos" class="py-20 relative">
+        <!-- Efeito de luz de fundo -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center bg-vip/20 text-vip border border-vip/30 px-6 py-3 rounded-full mb-6">
+                    <i class="fas fa-gem mr-3"></i>
+                    <span class="font-bold">ESCOLHA SUA VERSÃO VIP</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    INVESTIMENTO QUE SE PAGA EM
+                    <span class="text-vip">2 PEDIDOS</span>
+                </h2>
+                <p class="text-xl text-gray-400">Preço especial por tempo limitado</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- BÁSICO -->
+                    <div class="card-glow p-8 rounded-2xl border-2 border-vip relative animation-delay">
+                        <div class="text-center mb-8">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-800 text-gray-400 rounded-full mb-6 border border-gray-700" aria-hidden="true">
+                                <i class="fas fa-star text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">BÁSICO</h3>
+                            <p class="text-gray-400 mb-4">Para começar agora</p>
+                            <div class="text-4xl font-bold text-white mb-2">R$ 147</div>
+                            <div class="text-sm text-gray-500">1 computador</div>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span>Controle de pedidos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span>Dashboard financeiro</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span>Notas profissionais</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span>Backup manual no Excel</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://kiwify.com.br/link-basico" 
+                           class="block w-full bg-green-700 hover:bg-green-500 text-white font-bold py-4 px-6 rounded-xl text-center transition-all duration-300 border border-green-500"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            ESCOLHER BÁSICO
+                        </a>
+                    </div>
+                    
+                    <!-- VIP (DESTAQUE) -->
+                    <div class="card-glow p-8 rounded-2xl border-2 border-vip relative animate-delay">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <div class="bg-gradient-to-r from-vip to-vip-dark text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                                MAIS ESCOLHIDO
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mb-8">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-vip to-vip-dark text-white rounded-full mb-6" aria-hidden="true">
+                                <i class="fas fa-crown text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">VIP</h3>
+                            <p class="text-gray-400 mb-4">Produção industrial</p>
+                            <div class="text-5xl font-bold text-vip mb-2">R$ 247</div>
+                            <div class="text-sm text-gray-500">Multi-computador + Excel</div>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span class="font-semibold">Tudo do Básico</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span class="font-semibold">Vários computadores</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span class="font-semibold">Backup automático Excel</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span>Controle de estoque</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip mr-3" aria-hidden="true"></i>
+                                <span>Suporte VIP</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://kiwify.com.br/link-vip" 
+                           class="block w-full btn-vip text-white font-bold py-4 px-6 rounded-xl text-center shadow-lg"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="fas fa-bolt mr-2" aria-hidden="true"></i>
+                            QUERO SER VIP
+                        </a>
+                    </div>
+                    
+                    <!-- PERSONALIZADO -->
+                    <div class="card-glow p-8 rounded-2xl border-2 border-vip relative animate-delay">
+                        <div class="text-center mb-8">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-vip-accent/20 text-vip-accent rounded-full mb-6 border border-vip-accent/30" aria-hidden="true">
+                                <i class="fas fa-paint-brush text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">PERSONALIZADO</h3>
+                            <p class="text-gray-400 mb-4">Com sua identidade</p>
+                            <div class="text-4xl font-bold text-white mb-2">+R$ 70</div>
+                            <div class="text-sm text-gray-500">Adicione ao seu plano</div>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip-accent mr-3" aria-hidden="true"></i>
+                                <span>Nome da sua gráfica</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip-accent mr-3" aria-hidden="true"></i>
+                                <span>Seus produtos e preços</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip-accent mr-3" aria-hidden="true"></i>
+                                <span>Cores da sua marca</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-vip-accent mr-3" aria-hidden="true"></i>
+                                <span>Logo nas notas</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://kiwify.com.br/link-personalizado" 
+                           class="block w-full bg-vip-accent hover:bg-teal-500 text-white font-bold py-4 px-6 rounded-xl text-center transition-all duration-300"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            PERSONALIZAR AGORA
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Recomendação VIP -->
+                <div class="mt-12 card-glow p-8 rounded-2xl border border-vip/30">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="mb-6 md:mb-0 md:mr-8">
+                            <h4 class="text-xl font-bold mb-2 flex items-center">
+                                <i class="fas fa-rocket text-vip mr-3" aria-hidden="true"></i>
+                                RECOMENDAÇÃO DO ESPECIALISTA:
+                            </h4>
+                            <p class="text-gray-300">
+                                <span class="text-vip font-bold">VIP + Personalizado = R$ 317</span><br>
+                                Tenha o sistema perfeito para produção industrial com sua identidade.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="https://kiwify.com.br/link-completo" 
+                               class="btn-vip text-white font-bold py-4 px-8 rounded-xl inline-flex items-center justify-center"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                <i class="fas fa-box mr-2" aria-hidden="true"></i>PACOTE COMPLETO
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 🎯 SEÇÃO: OFERTA FINAL COM TIMER -->
+    <section id="oferta-final" class="py-20 relative overflow-hidden">
+        <!-- Efeito de luz pulsante -->
+        <div class="absolute inset-0 bg-gradient-to-r from-vip/10 to-vip-accent/10"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-vip rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="card-glow p-8 rounded-2xl border-2 border-vip text-center">
+                    <!-- Cabeçalho VIP -->
+                    <div class="inline-flex items-center urgent-badge text-white px-6 py-3 rounded-full mb-8">
+                        <i class="fas fa-exclamation-triangle mr-3" aria-hidden="true"></i>
+                        <span class="font-bold">OFERTA VIP TERMINANDO</span>
+                    </div>
+                    
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        SUA ÚLTIMA CHANCE DE
+                        <span class="text-vip">ORGANIZAR 2024</span>
+                    </h2>
+                    
+                    <!-- Comparação de Preços -->
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+                        <div class="text-center">
+                            <div class="text-sm text-gray-400 mb-2">PREÇO NORMAL</div>
+                            <div class="text-3xl font-bold text-red-500 line-through">R$ 497</div>
+                        </div>
+                        
+                        <div class="text-vip text-2xl animate-pulse">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-sm text-gray-400 mb-2">HOJE APENAS</div>
+                            <div class="text-4xl font-bold text-6xl text-green-500">R$ 147</div>
+                        </div>
+                        
+                        <div class="text-vip text-2xl animate-pulse">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-sm text-gray-400 mb-2">VOLTA PARA</div>
+                            <div class="text-3xl font-bold text-red-300">R$ 497</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timer Gigante -->
+                    <div class="mb-8 p-6 bg-black/50 rounded-2xl border border-vip/30">
+                        <div class="text-sm text-gray-300 mb-4">⏳ OFERTA ACABA EM:</div>
+                        <div class="text-5xl font-bold timer-vip font-mono" id="main-timer">
+                            15:00:00
+                        </div>
+                    </div>
+                    
+                    <!-- Botão Final VIP -->
+                    <div class="relative inline-block">
+                        <a href="https://kiwify.com.br/link-vip" 
+                           class="btn-vip text-white font-bold py-5 px-12 rounded-xl text-xl inline-flex items-center justify-center shadow-2xl"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="fas fa-lock mr-3" aria-hidden="true"></i>
+                            SIM, QUERO PRODUÇÃO ORGANIZADA!
+                        </a>
+                    </div>
+                    
+                    <!-- Garantia -->
+                    <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-vip-accent mr-2" aria-hidden="true"></i>
+                            30 dias de garantia
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-download text-vip-accent mr-2" aria-hidden="true"></i>
+                            Download imediato
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-headset text-vip-accent mr-2" aria-hidden="true"></i>
+                            Suporte VIP
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 📞 RODAPÉ COM WHATSAPP -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-vip p-3 rounded-lg mr-4" aria-hidden="true">
+                            <i class="fas fa-print text-xl"></i>
+                        </div>
+                        <div>
+                        <h1 class="text-xl font-bold">
+                            <span class="text-white">MINHA</span>
+                            <span class="text-vip">GRÁFICA</span>
+                            <span class="text-vip-accent">.VIP</span>
+                        </h1>
+                        <p class="text-xs text-gray-400">Sistema Industrial de Gestão</p>
+                    </div>
+                    </div>
+                    <p class="text-gray-400 max-w-md">
+                        Transformando gráficas em linhas de produção organizadas e lucrativas.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <h4 class="font-bold mb-4">PRONTO PARA ORGANIZAR?</h4>
+                    <a href="https://wa.me/5524999467266?text=Olá! Quero o Sistema VIP para minha gráfica" 
+                       class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp mr-3 text-xl" aria-hidden="true"></i>
+                        FALE DIRETO COM ESPECIALISTA
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-900 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 GraficaPro.VIP • Sistema de gestão industrial para gráficas
+                </p>
+                <p class="text-gray-500 text-sm mt-2">
+                    Desenvolvido por Rafael • rafaelgmotion@gmail.com
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 🔥 WHATSAPP FLUTUANTE VIP -->
+    <a href="https://wa.me/5524999467266?text=Olá! Quero o Sistema VIP para minha gráfica AGORA" 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 transition-transform duration-300 animate-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    
+    <!-- ⚡ SCRIPTS VIP -->
+    <script>
+        // ⏰ TIMER VIP (15 horas)
+const endTime = new Date(Date.now() + 15 * 60 * 60 * 1000);
+
+function updateVipTimers() {
+    const now = new Date();
+    const diff = endTime - now;
+
+    if (diff <= 0) {
+        document.getElementById('top-timer').textContent = "00:00:00";
+        document.getElementById('main-timer').textContent = "00:00:00";
+        return;
+    }
+
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    const timeString = 
+        `${hours.toString().padStart(2, '0')}:` +
+        `${minutes.toString().padStart(2, '0')}:` +
+        `${seconds.toString().padStart(2, '0')}`;
+
+    document.getElementById('top-timer').textContent = timeString;
+    document.getElementById('main-timer').textContent = timeString;
+
+    // Menos de 5 minutos
+    if (hours === 0 && minutes < 5) {
+        document.querySelectorAll('.timer-vip').forEach(timer => {
+            timer.classList.add('animate-pulse');
+        });
+    }
+}
+
+setInterval(updateVipTimers, 1000);
+updateVipTimers();
+
+        
+        // ✨ EFEITO NAS IMAGENS DOS PLANOS
+        document.querySelectorAll('.card-glow').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 0 50px rgba(255, 107, 53, 0.4)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '0 0 30px rgba(255, 107, 53, 0.1)';
+            });
+        });
+        
+        // 🎯 SCROLL SUAVE
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 🔥 EFEITO DE FAÍSCAS NOS BOTÕES VIP
+        document.querySelectorAll('.btn-vip').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                // Cria faíscas extras
+                for (let i = 0; i < 3; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = Math.random() * 100 + '%';
+                    sparkle.style.top = Math.random() * 100 + '%';
+                    sparkle.style.animationDelay = Math.random() + 's';
+                    this.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        if (sparkle.parentNode === this) {
+                            this.removeChild(sparkle);
+                        }
+                    }, 1000);
+                }
+            });
+        });
+        
+        // 📈 CONTADOR DINÂMICO DE COMPRAS
+        let vipSales = 247;
+        setInterval(() => {
+            if (Math.random() > 0.5) {
+                vipSales += 1;
+                
+                // Atualiza todos os contadores
+                document.querySelectorAll('.text-3xl.font-bold.text-white').forEach(el => {
+                    if (el.textContent === '247' || !isNaN(parseInt(el.textContent))) {
+                        el.textContent = vipSales;
+                    }
+                });
+                
+                // Notificação VIP ocasional
+                if (Math.random() > 0.8) {
+                    const notification = document.createElement('div');
+                    notification.className = 'fixed bottom-24 right-6 bg-vip text-white px-4 py-3 rounded-xl shadow-2xl z-40 transition-all duration-300';
+                    notification.style.transform = 'translateY(0)';
+                    notification.style.opacity = '1';
+                    notification.innerHTML = `
+                        <div class="flex items-center">
+                            <i class="fas fa-bolt mr-3"></i>
+                            <div>
+                                <div class="font-bold">+1 GRÁFICA VIP!</div>
+                                <div class="text-sm opacity-90">Agora são ${vipSales} gráficas organizadas</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        notification.style.opacity = '0';
+                        notification.style.transform = 'translateY(20px)';
+                        setTimeout(() => notification.remove(), 300);
+                    }, 3000);
+                }
+            }
+        }, 15000);
+        
+        // 💰 AUMENTO GRADUAL DE PREÇO
+        let currentPrice = 147;
+        const priceInterval = setInterval(() => {
+            if (currentPrice < 497) {
+                currentPrice += 1;
+                
+                // Atualiza preços principais
+                const priceElements = document.querySelectorAll('.text-4xl.font-bold.text-white, .text-5xl.font-bold.text-vip');
+                priceElements.forEach(el => {
+                    if (el.textContent.includes('R$ 147') || el.textContent.includes('R$ 247')) {
+                        const isVip = el.textContent.includes('247');
+                        el.textContent = `R$ ${isVip ? currentPrice + 100 : currentPrice}`;
+                        
+                        // Efeito visual
+                        el.classList.add('text-red-400');
+                        setTimeout(() => el.classList.remove('text-red-400'), 500);
+                    }
+                });
+            } else {
+                clearInterval(priceInterval);
+            }
+        }, 180000); // Aumenta R$1 a cada 3 minutos
+        
+        // 🎭 EFEITO DE DIGITAÇÃO NO TÍTULO
+        const titleElement = document.querySelector('.print-text');
+        if (titleElement) {
+            const originalText = titleElement.textContent;
+            titleElement.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    titleElement.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            };
+            
+            // Inicia após 1 segundo
+            setTimeout(typeWriter, 1000);
+        }
+        
+        // 🔊 SOM DE IMPRESSÃO (opcional - remova se não quiser)
+        document.querySelectorAll('a[href*="kiwify"]').forEach(button => {
+            button.addEventListener('click', function() {
+                try {
+                    const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-printer-scan-2313.mp3');
+                    audio.volume = 0.3;
+                    audio.play().catch(e => console.log("Áudio não pôde ser reproduzido:", e));
+                } catch(e) {
+                    console.log("Erro ao reproduzir áudio:", e);
+                }
+            });
+        });
+        
+        // 📱 DETECTOR DE MOBILE
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        
+        if (isMobile()) {
+            document.body.classList.add('mobile-device');
+        }
+        
+        // 📊 ANALYTICS SIMPLES (opcional)
+        window.addEventListener('load', function() {
+            console.log('Sistema GráficaPro.VIP carregado com sucesso!');
+        });
+    </script>
+</body>
+</html>
